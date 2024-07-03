@@ -1,6 +1,5 @@
 /*
-Laura Isabela Barauna tem 19 anos, pesa 45 kg
-tem 1.7 de altura e seu IMC é de 15.570934256055365
+Laura Isabela Barauna tem 19 anos, pesa 45 kg tem 1.7 de altura e seu IMC é de 15.570934256055365
 Laura Barauna nasceu em 2005
 */
 
@@ -17,4 +16,10 @@ anoNascimento = 2024 - idade;
 
 console.log(nome, sobrenome, "tem", idade, "anos, pesa",peso,"kg tem",alturaEmM,"de altura e seu IMC é de",imc);
 console.log(nome,sobrenome,"nasceu em",anoNascimento);
+
+console.log("=====")
+
+// template string
+console.log(`${nome,sobrenome} tem ${idade} anos, pesa ${peso} kg tem ${alturaEmM} de altura e seu IMC é de ${imc}`);
+console.log(`${nome,sobrenome} nasceu em ${anoNascimento}`);
 
