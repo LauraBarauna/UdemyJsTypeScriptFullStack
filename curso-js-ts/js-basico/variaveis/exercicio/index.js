@@ -1,6 +1,6 @@
 /*
 Laura Isabela Barauna tem 19 anos, pesa 45 kg tem 1.7 de altura e seu IMC é de 15.570934256055365
-Laura Barauna nasceu em 2005
+Laura Isabela Barauna nasceu em 2005
 */
 
 const nome = "Laura Isabela";
