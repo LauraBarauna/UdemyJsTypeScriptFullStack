@@ -1,8 +1,13 @@
 # Operadores aritméticos
 
-+ Adição
-- Subtração
-* Multiplicação
-/ Divisão
-** Potenciação
-% Resto da divisão
+*+* = Adição
+
+*-* = Subtração
+
+_*_ = Multiplicação
+
+/ = Divisão
+
+** = Potenciação
+
+% = Resto da divisão
