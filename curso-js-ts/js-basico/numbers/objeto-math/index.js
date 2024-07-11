@@ -1,5 +1,6 @@
 let num1 = 9.78593;
 
+// console.log(num1 ** 0,5) // Descobre a raiz quadrada
 // let num2 = Math.floor(num1); // Arredonda pra baixo
 // let num2 = Math.ceil(num1); // Arredonda pra cima
 // let num2 = Math.round(num1); // Arredonda automaticamente, se for metade ou acima da metade, arredonda pra cima, se for menor que a metade arredonda pra baixo
