@@ -3,7 +3,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15%;
+    height: 100vh;
+    margin-top: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(25, 25, 25);
 }
@@ -29,4 +30,5 @@ p{
     margin-top: 5px;
     font-size: 20px;
 }
+
 
