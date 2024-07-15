@@ -12,4 +12,4 @@ const a = {
   
   b.nome = 'João';
   console.log(a);
-  console.log(b);
+  console.log(b);v
