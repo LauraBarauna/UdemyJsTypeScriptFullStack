@@ -56,3 +56,13 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
+
+.stilizado{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(47, 255, 182);
+  width: 600px;
+  height: 40px;
+  padding: 20px;
+}
