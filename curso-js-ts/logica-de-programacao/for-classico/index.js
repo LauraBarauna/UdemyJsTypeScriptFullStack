@@ -1,5 +1,7 @@
 // For clássico
 
+console.log("Modo crescente");
+
 for(let i = 400; i <= 500; i++) {
     console.log(i);
 }
