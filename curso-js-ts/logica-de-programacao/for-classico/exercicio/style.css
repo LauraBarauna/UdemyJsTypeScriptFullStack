@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(29, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+}
+
