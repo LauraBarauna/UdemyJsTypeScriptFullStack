@@ -8,3 +8,4 @@ for (let valor of nome){
 for (let valor of sobrenomes){
     console.log(valor);
 }
+
