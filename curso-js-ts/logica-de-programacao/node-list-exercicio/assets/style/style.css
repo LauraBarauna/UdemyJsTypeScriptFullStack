@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: rgb(29, 29, 29);
+    font-family: "Montserrat", sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(253, 255, 250);
+    width: 500px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 8px;
+}
