@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.formulario{
+    margin-bottom: 25px;
+}
+
+.nova-div{
+    margin-top: 15px; /* Ajuste o espaço acima das tarefas */
+    margin-bottom: 25px; /* Ajuste o espaço abaixo das tarefas */
+    padding: 10px; /* Adicione algum padding dentro da nova div para um melhor layout */
+    background-color: #f9f9f9; /* Adicione um fundo claro para as tarefas */
+    border: 1px solid #ddd; /* Adicione uma borda leve para cada tarefa */
+    border-radius: 5px; /* Borda arredondada para as tarefas */
+}
+
+.botao-limpar{
+    margin-left: 15px;
+}
