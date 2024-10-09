@@ -1,83 +1,81 @@
-function criaCalculadora() {
-    return {
+function Calculadora() {
+    
+    // Atributos
+    this.display = document.querySelector('.display');
+    
+    // Métodos
+    this.iniciar = function() {
+        this.capturarBotoes();
+        this.pressionaEnter();
+    }
 
-        // Atributos
-        display: document.querySelector('.display'),
-
-        // Métodos
-        inicia() {
-            this.cliqueBotoes();
-            this.pressionaEnter();
-        },
-
-        pressionaEnter() {
-            this.display.addEventListener('keyup', e => {
-                if(e.keyCode === 13) {
-                    this.realizaConta();
-                }
-            });
-        },
-
-        // Métodos que ficam dentro do método cliqueBotoes()
-
-        clearDisplay() {
-            this.display.value = '';
-        },
-
-        apagaUm() {
-            this.display.value = this.display.value.slice(0, -1);
-        },
-
-        realizaConta() {
-            let conta = this.display.value;
-
-            try {
-                conta = eval(conta);
-
-                if (!conta) {
-                    alert('Conta inválida');
-                    return
-                }
-
-                this.display.value = String(conta);
-            } catch (e) {
-                alert('Conta inválida');
-                return;
+    this.pressionaEnter = function() {
+        document.addEventListener('keyup', e => {
+            if(e.keyCode === 13){
+                this.realizarConta();
             }
-        },
+        });
+    }
 
-        btnParaDisplay(valor) {
-            this.display.value += valor;
-        },
+    // Métodos que ficam dentro do método capturaBotao()
 
-        // Método cliqueBotoes()
+    this.limparTudo = function () {
+        this.display.value = '';
+    }
 
-        cliqueBotoes() {
-            document.addEventListener('click', e => {
-                const el = e.target;
+    this.apagarUm = () => {
+        this.display.value = this.display.value.slice(0, -1);
+    }
 
-                if (el.classList.contains('btn-num')) {
-                    this.btnParaDisplay(el.innerText);
-                    console.log(el.innerText)
-                }
+    this.mostrarNoDisplay = function (valor) {
+        this.display.value += valor;
+    }
 
-                if (el.classList.contains('btn-clear')) {
-                    this.clearDisplay();
-                }
+    this.realizarConta = () => {
+        let conta = this.display.value;
 
-                if (el.classList.contains('btn-del')) {
-                    this.apagaUm();
-                }
+        try{
+            conta = eval(conta);
 
-                if (el.classList.contains('btn-eq')) {
-                    this.realizaConta();
-                }
-            });
-        },
+            if(!conta){
+                alert('Conta inválida!');
+                return
+            }
 
+            this.display.value = String(conta);
+        }catch{
+            alert('Conta inválida!');
+            return
+        }
+    }
 
-    };
+    // Métodos capturaBotao
+
+    this.capturarBotoes = function() {
+        document.addEventListener('click', e => {
+            const el = e.target;
+            
+            if(el.classList.contains('btn-num')) {
+                this.mostrarNoDisplay(el.innerText);
+            }
+
+            if(el.classList.contains('btn-clear')) {
+                this.limparTudo();
+            }
+
+            if(el.classList.contains('btn-del')) {
+                this.apagarUm();
+            }
+
+            if(el.classList.contains('btn-eq')) {
+                this.realizarConta();
+            }
+
+        });
+    }
 }
 
-const calculadora = criaCalculadora();
-calculadora.inicia();
+// Instanciando
+
+const calculadora = new Calculadora();
+calculadora.iniciar();
