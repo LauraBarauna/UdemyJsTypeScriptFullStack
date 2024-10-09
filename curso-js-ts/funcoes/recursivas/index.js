@@ -1,8 +1,10 @@
-function recursiva(max) {
-    console.log(max);
-    if (max >= 1000) return;
-    max++;
-    recursiva(max);
-  }
-  
-  recursiva(0);
+function fatorial (n) {
+    // Caso base
+    if (n ===1 || n ===0 )
+        return 1;
+    // Chamada recursiva
+    else
+    return n * fatorial(n-1);
+}
+
+console.log(fatorial(4));
