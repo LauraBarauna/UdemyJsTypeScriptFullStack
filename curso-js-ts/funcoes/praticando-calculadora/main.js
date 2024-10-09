@@ -18,6 +18,8 @@ function criaCalculadora() {
             });
         },
 
+        // Métodos que ficam dentro do método cliqueBotoes()
+
         clearDisplay() {
             this.display.value = '';
         },
@@ -44,6 +46,11 @@ function criaCalculadora() {
             }
         },
 
+        btnParaDisplay(valor) {
+            this.display.value += valor;
+        },
+
+        // Método cliqueBotoes()
 
         cliqueBotoes() {
             document.addEventListener('click', e => {
@@ -51,6 +58,7 @@ function criaCalculadora() {
 
                 if (el.classList.contains('btn-num')) {
                     this.btnParaDisplay(el.innerText);
+                    console.log(el.innerText)
                 }
 
                 if (el.classList.contains('btn-clear')) {
@@ -67,9 +75,6 @@ function criaCalculadora() {
             });
         },
 
-        btnParaDisplay(valor) {
-            this.display.value += valor;
-        },
 
     };
 }
