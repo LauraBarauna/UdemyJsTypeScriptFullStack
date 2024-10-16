@@ -4,7 +4,7 @@ O método `splice()` no JavaScript é muito útil para adicionar, remover ou sub
 Ele é bastante **flexível**, pois você pode especificar a partir de qual posição quer fazer as alterações e quantos elementos deseja modificar.
 
 ## Sintaxe
-```
+```js
 array.splice(indice, quantosRemover, elemento1, elemento2, ..., elementoN);
 ```
 

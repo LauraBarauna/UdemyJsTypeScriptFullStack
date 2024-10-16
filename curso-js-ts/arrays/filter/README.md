@@ -5,7 +5,7 @@ O método `filter()` no JavaScript é usado para criar um novo array com todos o
 
 ## Sintaxe
 
-```
+```js
 let novoArray = array.filter(callback(elemento, índice, array), thisArg);
 ```
  - **callback:** Função que será executada em cada elemento do array. Ela recebe três argumentos:

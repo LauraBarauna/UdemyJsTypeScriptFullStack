@@ -2,7 +2,7 @@
 O método `concat()` no JavaScript é usado para juntar dois ou mais arrays. Ele cria e retorna um novo array, sem modificar os arrays originais.
 
 ## Sintaxe
-```
+```js
 let novoArray = array1.concat(array2, array3, ..., arrayN);
 ```
 
