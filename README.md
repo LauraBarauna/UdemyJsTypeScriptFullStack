@@ -4,3 +4,5 @@ Esse repositório serve para armazenar estudos e exercícios referentes ao curso
 ### JavaScript
 1. [JavaScript Básico](https://github.com/LauraBarauna/UdemyJsTypeScriptFullStack/tree/main/curso-js-ts/js-basico)
 2. [Lógica de Programação](https://github.com/LauraBarauna/UdemyJsTypeScriptFullStack/tree/main/curso-js-ts/logica-de-programacao)
+3. [Funções](https://github.com/LauraBarauna/UdemyJsTypeScriptFullStack/tree/main/curso-js-ts/funcoes)
+4. [Arrays](https://github.com/LauraBarauna/UdemyJsTypeScriptFullStack/tree/main/curso-js-ts/arrays)
