@@ -19,4 +19,4 @@ let novoArray = array.filter(callback(elemento, índice, array), thisArg);
 Assim como `concat()`, o `filter()` não altera o array original. Ele apenas retorna um novo array com os elementos que passaram no teste.
 
 
-### Exemplos estão no [index.js]()
+### Exemplos estão no [index.js](https://github.com/LauraBarauna/UdemyJsTypeScriptFullStack/blob/main/curso-js-ts/arrays/filter/index.js)

@@ -11,4 +11,4 @@ let novoArray = array1.concat(array2, array3, ..., arrayN);
 ## Não altera os arrays originais
 o método `concat()` não modifica os arrays originais. Ele retorna um novo array.
 
-### Exemplos estão no [index.js]() 
+### Exemplos estão no [index.js](https://github.com/LauraBarauna/UdemyJsTypeScriptFullStack/blob/main/curso-js-ts/arrays/concat/index.js) 
