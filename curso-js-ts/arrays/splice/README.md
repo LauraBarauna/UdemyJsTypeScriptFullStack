@@ -15,4 +15,4 @@ array.splice(indice, quantosRemover, elemento1, elemento2, ..., elementoN);
 
 ### O método splice() modifica o array original. Se você precisar apenas de uma cópia modificada do array sem alterar o original, pode usar métodos como slice().
 
-## Exemplos estão no [index.js]()
+### Exemplos estão no [index.js]()
