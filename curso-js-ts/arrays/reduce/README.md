@@ -107,4 +107,4 @@ acumulador = 20, produto = { nome: 'Calça', preco: 50 } → acumulador = 20 + 5
 acumulador = 70, produto = { nome: 'Sapato', preco: 100 } → acumulador = 70 + 100 = 170
 ```
 
-### Exemplo estão no [index.js]()
+### Exemplo estão no [index.js](https://github.com/LauraBarauna/UdemyJsTypeScriptFullStack/blob/main/curso-js-ts/arrays/reduce/index.js)
