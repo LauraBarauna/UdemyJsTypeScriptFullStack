@@ -32,7 +32,7 @@
 
 // Axios
 axios('pessoas.json')
-    .then(resposta => carregaElementosNaPagina(resposta.data))
+    .then(resposta => carregaElementosNaPagina(resposta.dataclear))
 
 function carregaElementosNaPagina(json) {
     const table = document.querySelector('.tabela');
