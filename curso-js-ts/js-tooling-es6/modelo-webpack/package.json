@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "gera": "webpack -w"
+    "dev": "webpack -w"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "core-js": "^3.39.0",
-    "regenerator-runtime": "^0.14.1"
+    "css-loader": "^7.1.2",
+    "regenerator-runtime": "^0.14.1",
+    "style-loader": "^4.0.0"
   }
 }
