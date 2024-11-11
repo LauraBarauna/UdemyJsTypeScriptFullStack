@@ -1,8 +1,8 @@
 
 const senhaGeradaHTML = document.querySelector('.senha-gerada');
 
-
 export default function geraSenha(maiuscula, minuscula, num, simbolo, tamanho) {
+    senhaGeradaHTML.innerText = '';
 
     let senhaConcatenada = '';
     let senhaGerada = '';

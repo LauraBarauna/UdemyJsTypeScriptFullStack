@@ -16,12 +16,30 @@ __webpack_require__.r(__webpack_exports__);
 
 var botao = document.querySelector('.gerar-senhas');
 var inputTamanhoSenha = document.querySelector('.tamanho-senha');
+var erroMsg = document.querySelector('.erro');
+var checkBox = Array.from(document.querySelectorAll('input[type="checkbox"]'));
 var chkMaiusculas = document.querySelector('.chk-maiusculas');
 var chkMinusculas = document.querySelector('.chk-minusculas');
 var chkNumeros = document.querySelector('.chk-numeros');
 var chkSimbolos = document.querySelector('.chk-simbolos');
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (botao.addEventListener('click', function () {
+  erroMsg.innerText = '';
   var tamanhoSenha = Number(inputTamanhoSenha.value);
+  var caixasNaoSelecionas = checkBox.filter(function (caixa) {
+    return !caixa.checked;
+  });
+  if (caixasNaoSelecionas.length === 4) {
+    erroMsg.innerText = "Por favor, selecione pelo menos uma caixinha!";
+    return;
+  }
+  if (tamanhoSenha <= 0) {
+    erroMsg.innerText = "Por favor, insira o tamanho da senha!";
+    return;
+  }
+  if (tamanhoSenha <= 3 || tamanhoSenha > 20) {
+    erroMsg.innerText = "A senha precisa ter entre 4 e 20 caractéres!";
+    return;
+  }
   var upper = false;
   ;
   var lower = false;
@@ -51,6 +69,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var senhaGeradaHTML = document.querySelector('.senha-gerada');
 function geraSenha(maiuscula, minuscula, num, simbolo, tamanho) {
+  senhaGeradaHTML.innerText = '';
   var senhaConcatenada = '';
   var senhaGerada = '';
   var maiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -158,6 +177,13 @@ table {
   margin: 40px 0;
 }
 
+
+.erro{
+  margin: 20px 0;
+  color: red;
+  font-weight: bold;
+}
+
 input[type="checkbox"] {
   width: 15px;
   height: 15px;
@@ -167,7 +193,7 @@ button {
   display: block;
   margin: 40px 0;
   font-size: 1em;
-}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AACA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;AAEA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,YAAY;EACZ,gCAAgC;EAChC,WAAW;EACX,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,2BAA2B;EAC3B,cAAc;AAChB;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,cAAc;EACd,cAAc;EACd,cAAc;AAChB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n:root {\n  --primary-color: rgb(17, 86, 102);\n  --primary-color-darker: rgb(9, 48, 56);\n}\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: var(--primary-color);\n  font-family: 'Open sans', sans-serif;\n  font-size: 1.3em;\n  line-height: 1.5em;\n}\n\n.container {\n  max-width: 640px;\n  margin: 50px auto;\n  background: #fff;\n  padding: 20px;\n  border-radius: 10px;\n}\n\nform input, form label, form button {\n  display: block;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\nform input {\n  font-size: 24px;\n  height: 50px;\n  padding: 0 20px;\n}\n\nform input:focus {\n  outline: 1px solid var(--primary-color);\n}\n\nform button {\n  border: none;\n  background: var(--primary-color);\n  color: #fff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 50px;\n  cursor: pointer;\n  margin-top: 30px;\n}\n\nform button:hover {\n  background: var(--primary-color-darker);\n}\n\ntable {\n  width: 100%;\n}\n\n.senha-gerada {\n  font-size: 2em;\n  color: var(--primary-color);\n  margin: 40px 0;\n}\n\ninput[type=\"checkbox\"] {\n  width: 15px;\n  height: 15px;\n}\n\nbutton {\n  display: block;\n  margin: 40px 0;\n  font-size: 1em;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AACA;EACE,iCAAiC;EACjC,sCAAsC;AACxC;;AAEA;EACE,sBAAsB;EACtB,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;EACV,gCAAgC;EAChC,oCAAoC;EACpC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;EAChB,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,WAAW;EACX,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,YAAY;EACZ,gCAAgC;EAChC,WAAW;EACX,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,uCAAuC;AACzC;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,2BAA2B;EAC3B,cAAc;AAChB;;;AAGA;EACE,cAAc;EACd,UAAU;EACV,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,cAAc;EACd,cAAc;EACd,cAAc;AAChB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');\n:root {\n  --primary-color: rgb(17, 86, 102);\n  --primary-color-darker: rgb(9, 48, 56);\n}\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: var(--primary-color);\n  font-family: 'Open sans', sans-serif;\n  font-size: 1.3em;\n  line-height: 1.5em;\n}\n\n.container {\n  max-width: 640px;\n  margin: 50px auto;\n  background: #fff;\n  padding: 20px;\n  border-radius: 10px;\n}\n\nform input, form label, form button {\n  display: block;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\nform input {\n  font-size: 24px;\n  height: 50px;\n  padding: 0 20px;\n}\n\nform input:focus {\n  outline: 1px solid var(--primary-color);\n}\n\nform button {\n  border: none;\n  background: var(--primary-color);\n  color: #fff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 50px;\n  cursor: pointer;\n  margin-top: 30px;\n}\n\nform button:hover {\n  background: var(--primary-color-darker);\n}\n\ntable {\n  width: 100%;\n}\n\n.senha-gerada {\n  font-size: 2em;\n  color: var(--primary-color);\n  margin: 40px 0;\n}\n\n\n.erro{\n  margin: 20px 0;\n  color: red;\n  font-weight: bold;\n}\n\ninput[type=\"checkbox\"] {\n  width: 15px;\n  height: 15px;\n}\n\nbutton {\n  display: block;\n  margin: 40px 0;\n  font-size: 1em;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
