@@ -1,8 +1,10 @@
 <%- include('includes/head') %>
 
     <section class="container">
-        <h1> <%= umaVariavelLocal  %> </h1>
+        <h1> Lorem </h1>
+
         <form action="/" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <label>Cliente</label>
             <input type="text" name="cliente">
             <button>Submit</button>
