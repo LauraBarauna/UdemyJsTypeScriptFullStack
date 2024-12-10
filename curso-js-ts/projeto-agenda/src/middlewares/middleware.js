@@ -5,6 +5,14 @@ exports.middlewareGlobal = (req, res, next) => {
     next();
 };
 
+exports.csp = (req, res, next) => {
+    res.setHeader(
+        'Content-Security-Policy',
+        "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net"
+      );
+      next();
+};
+
 exports.outroMiddleware = (req, res, next) => {
     next();
 }

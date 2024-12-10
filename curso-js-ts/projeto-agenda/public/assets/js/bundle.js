@@ -24160,6 +24160,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+console.log('Oi, front end funcionando!');
 })();
 
 /******/ })()
