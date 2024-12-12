@@ -48,7 +48,7 @@ Contato.prototype.cleanUp = function () {
     nome: this.body.nome,
     sobrenome: this.body.sobrenome,
     email: this.body.email,
-    telefone: this.body.telefone,
+    telefone: this.body.telefone ? this.body.telefone.replace(/\D/g, '') : '',
   };
 };
 

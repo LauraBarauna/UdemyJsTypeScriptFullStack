@@ -14,9 +14,9 @@
 
       <!-- Verifica se está no modo de edição ou criação -->
       <% if(contato && contato._id) { %>
-        <form id="form-cria-user" action="/contato/edit/<%= contato._id %>" method="POST">
+        <form class="form-cria-user" action="/contato/edit/<%= contato._id %>" method="POST">
       <% } else { %>
-        <form id="form-cria-user" action="/contato/register" method="POST">
+        <form class="form-cria-user" action="/contato/register" method="POST">
       <% } %>
 
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
@@ -25,6 +25,7 @@
           <label>Nome</label>
           <!-- Verifica se "contato" existe e usa o valor, senão o campo fica vazio -->
           <input value="<%= contato ? contato.nome : '' %>" type="text" class="form-control" name="nome">
+          <p class="erro-nome text-danger"></p>
         </div>
 
         <div class="form-group">
@@ -35,11 +36,13 @@
         <div class="form-group">
           <label>Email</label>
           <input value="<%= contato ? contato.email : '' %>" type="email" class="form-control" name="email">
+          <p class="erro-email text-danger"></p>
         </div>
 
         <div class="form-group">
           <label>Telefone</label>
-          <input value="<%= contato ? contato.telefone : '' %>" type="tel" class="form-control" name="telefone">
+          <input value="<%= contato ? contato.telefone : '' %>" type="tel" class="form-control telefone" name="telefone" placeholder="(+XX) XX X XXXX-XXXX">
+          <p class="erro-telefone text-danger"></p>
         </div>
 
         <button type="submit" class="btn btn-primary col-lg-5 my-2">Salvar</button>
