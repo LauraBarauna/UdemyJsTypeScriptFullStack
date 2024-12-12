@@ -24,24 +24,24 @@
         <div class="form-group">
           <label>Nome</label>
           <!-- Verifica se "contato" existe e usa o valor, senão o campo fica vazio -->
-          <input value="<%= contato ? contato.nome : '' %>" type="text" class="form-control" name="nome">
+          <input autocomplete="off" value="<%= contato ? contato.nome : '' %>" type="text" class="form-control" name="nome">
           <p class="erro-nome text-danger"></p>
         </div>
 
         <div class="form-group">
           <label>Sobrenome</label>
-          <input value="<%= contato ? contato.sobrenome : '' %>" type="text" class="form-control" name="sobrenome">
+          <input autocomplete="off" value="<%= contato ? contato.sobrenome : '' %>" type="text" class="form-control" name="sobrenome">
         </div>
 
         <div class="form-group">
           <label>Email</label>
-          <input value="<%= contato ? contato.email : '' %>" type="email" class="form-control" name="email">
+          <input autocomplete="off" value="<%= contato ? contato.email : '' %>" type="email" class="form-control" name="email">
           <p class="erro-email text-danger"></p>
         </div>
 
         <div class="form-group">
           <label>Telefone</label>
-          <input value="<%= contato ? contato.telefone : '' %>" type="tel" class="form-control telefone" name="telefone" placeholder="(+XX) XX X XXXX-XXXX">
+          <input autocomplete="off" value="<%= contato ? contato.telefone : '' %>" type="tel" class="form-control telefone" name="telefone" placeholder="(+XX) XX X XXXX-XXXX">
           <p class="erro-telefone text-danger"></p>
         </div>
 

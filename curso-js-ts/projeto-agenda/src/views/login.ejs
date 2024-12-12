@@ -19,17 +19,17 @@
                     <p class="text-center">Se você ainda não tem uma conta, <br> preencha o formulário abaixo:</p>
 
                     <form class="form-cadastro" action="/login/register" method="POST">
-                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <input  type="hidden" name="_csrf" value="<%= csrfToken %>">
 
                         <div class="form-group">
                             <label>Seu email</label>
-                            <input type="email" class="form-control" name="email">
+                            <input  autocomplete="off" type="email" class="form-control" name="email">
                             <p class="erro-email-cadastro text-danger"></p>
                         </div>
 
                         <div class="form-group my-2">
                             <label>Sua senha</label>
-                            <input type="password" class="form-control" name="password">
+                            <input  autocomplete="off" type="password" class="form-control" name="password">
                             <p class="erro-senha-cadastro text-danger"></p>
                         </div>
 
@@ -43,17 +43,17 @@
                     <p class="text-center">Se você já tem uma conta, <br> faça login abaixo:</p>
 
                     <form class="form-login" action="/login/login" method="POST">
-                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <input autocomplete="off" type="hidden" name="_csrf" value="<%= csrfToken %>">
 
                         <div class="form-group">
                             <label>Seu email</label>
-                            <input type="email" class="form-control" name="email">
+                            <input autocomplete="off" type="email" class="form-control" name="email">
                             <p class="erro-email-login text-danger"></p>
                         </div>
 
                         <div class="form-group my-2">
                             <label>Sua senha</label>
-                            <input type="password" class="form-control" name="password">
+                            <input autocomplete="off" type="password" class="form-control" name="password">
                             <p class="erro-senha-login text-danger"></p>
                         </div>
 
