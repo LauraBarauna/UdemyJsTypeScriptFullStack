@@ -1,0 +1,27 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-node": "^11.1.0",
+    "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
+    "sucrase": "^3.35.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
