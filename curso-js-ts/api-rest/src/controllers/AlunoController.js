@@ -38,8 +38,8 @@ class AlunoController {
         });
       };
 
-      const novosDados = await aluno.update(req.body);
-      return res.json(novosDados);
+      const alunoAtualizado = await aluno.update(req.body);
+      return res.json(alunoAtualizado);
 
     } catch (e) {
       return res.status(400).json({
@@ -52,20 +52,21 @@ class AlunoController {
   async show(req, res) {
     try {
 
-      if(!req.params.id) {
+      const { id } = req.params;
+
+      if(!id) {
         return res.status(400).json({
           errors: ['ID não enviado'],
         });
       };
 
-      const aluno = await Aluno.findByPk(req.params.id);
+      const aluno = await Aluno.findByPk(id);
 
       if(!aluno) {
         return res.status(400).json({
           errors: ['Aluno não existe'],
         });
       };
-
 
       return res.json(aluno);
 
@@ -95,8 +96,9 @@ class AlunoController {
       };
 
       await aluno.destroy();
-      return res.json('Aluno deletado!');
-
+      return res.json({
+        apagado: true,
+      });
 
     } catch (e) {
       return res.status(400).json({
